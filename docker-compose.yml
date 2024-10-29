@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app-landing-webkominfo:
+    image: nginx:latest
+    ports:
+      - "8666:8666"
+    volumes:
+      - ./src:/usr/share/nginx/html
+    networks:
+      - network-landing-webkominfo
+
+networks:
+  network-landing-webkominfo:
+    driver: bridge
